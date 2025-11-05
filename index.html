@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agenda de Eventos Igreja Batista Independente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Agenda de Eventos - Igreja Batista Independente</h1>
+      <p class="subtitle">Adicione eventos e mantenha a comunidade informada.</p>
+    </header>
+
+    <section class="form-section">
+      <h2>Adicionar evento</h2>
+      <div class="form-row">
+        <label>Data</label>
+        <input type="date" id="data" />
+      </div>
+      <div class="form-row">
+        <label>Hora</label>
+        <input type="time" id="hora" />
+      </div>
+      <div class="form-row">
+        <label>Nome do evento</label>
+        <input type="text" id="nome" placeholder="Ex: Culto de Louvor" />
+      </div>
+      <div class="form-row">
+        <label>Descrição curta</label>
+        <input type="text" id="descricao" placeholder="Ex: Louvor especial com o grupo X" />
+      </div>
+      <div class="actions">
+        <button id="btnAdicionar">Adicionar Evento</button>
+        <button id="btnLimpar" class="secondary">Limpar campos</button>
+      </div>
+    </section>
+
+    <section class="list-section">
+      <h2>Próximos eventos</h2>
+      <div id="listaEventos" class="lista"></div>
+      <div class="footer-note">
+        <small>Observação: os eventos são salvos no navegador (localStorage). Cada dispositivo mantém sua própria lista. Para sincronizar entre todos, podemos usar Firebase.</small>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
