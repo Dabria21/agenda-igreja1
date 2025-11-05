@@ -5,20 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agenda de Eventos - Igreja Batista Independente</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #e6f0ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    form {
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: #4a90e2;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #3c7ec0;
+    }
+
+    #listaEventos {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .evento {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Agenda de Eventos - Igreja Batista Independente</h1>
+  <header>
+    Agenda de Eventos - Igreja Batista Independente
+  </header>
 
-  <div class="form-container">
-    <input type="date" id="data" />
-    <input type="time" id="hora" />
-    <input type="text" id="descricao" placeholder="Descrição do evento" />
-    <button id="adicionar">Adicionar Evento</button>
-  </div>
+  <form id="formEvento">
+    <input type="text" id="nome" placeholder="Nome do evento" required />
+    <input type="date" id="data" required />
+    <input type="time" id="hora" required />
+    <textarea id="descricao" placeholder="Descrição curta" required></textarea>
+    <button type="submit">Adicionar Evento</button>
+  </form>
 
-  <h2>📅 Próximos Eventos</h2>
-  <ul id="lista-eventos"></ul>
+  <section id="listaEventos">
+    <!-- Lista de eventos aparece aqui -->
+  </section>
 
-  <script type="module" src="script.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- Seu script -->
+  <script src="script.js"></script>
 </body>
 </html>
