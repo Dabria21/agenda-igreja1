@@ -27,20 +27,13 @@ form.addEventListener("submit", (e) => {
   const descricao = document.getElementById("descricao").value;
 
   if (nome && data && hora && descricao) {
-    const novoEvento = {
-      nome,
-      data,
-      hora,
-      descricao
-    };
-
-    // Salva no Firebase
+    const novoEvento = { nome, data, hora, descricao };
     db.ref("eventos").push(novoEvento);
-
     form.reset();
   }
 });
-s
+
+// Função para exibir os eventos
 db.ref("eventos").on("value", (snapshot) => {
   listaEventos.innerHTML = "";
   snapshot.forEach((childSnapshot) => {
