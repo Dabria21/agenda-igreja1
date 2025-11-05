@@ -1,49 +1,64 @@
 body {
+  background-color: #e6f0ff;
   font-family: Arial, sans-serif;
-  background-color: #e9f1ff;
-  color: #333;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  padding: 20px;
 }
 
-h1 {
-  color: #0a3d91;
-}
-
-.form-container {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-input, button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-button {
-  background-color: #0a3d91;
+header {
+  background-color: #4a90e2;
   color: white;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0c50b9;
+form button:hover {
+  background-color: #3c7ec0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+#listaEventos {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
 }
 
-li {
+.evento {
   background: white;
-  margin: 10px auto;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
-  max-width: 400px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
 }
